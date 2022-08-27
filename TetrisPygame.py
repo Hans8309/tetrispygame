@@ -3,6 +3,7 @@
 # Full Code: https://pastebin.com/embed_js/yaWTeF6y
 # 在原作者基础上增加分数显示，音效
 
+from ast import While
 import pygame
 import random
 
@@ -435,6 +436,12 @@ def main():
     draw_text_middle("You Lost", 40, (0, 255, 255), win)
     pygame.display.update()
     pygame.time.delay(2000)
+
+    pause = True
+    while pause:
+        for event in pygame.event.get():
+            if event.type == pygame.KEYDOWN:
+                pause = False
 
 
 def main_menu():
