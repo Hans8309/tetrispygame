@@ -5,11 +5,12 @@
 import tkinter as tk
 import time
 import random
+
 # ---------------------------------------------------
 # GLOBALS VARS  全局常量
 s_width = 800  # 游戏窗体总宽度
 s_height = 700  # 游戏窗体总高度
-block_size = 30    #每个积木最小单元像素大小
+block_size = 30  # 每个积木最小单元像素大小
 play_width = 300  # 积木窗体宽度，10列x30=300
 play_height = 600  # 积木窗体高度 ，20行X30=600
 
@@ -162,6 +163,7 @@ def down_block(event):
     # 向下移动俄罗斯方块
     global event_key
     event_key = "DOWN"
+
 
 def rotate_block(event):
     # 旋转移动俄罗斯方块
@@ -410,7 +412,7 @@ def main():
         draw_next_shape(next_piece, win)
 
         # 显示游戏得分
-        canvas.create_text(400, 60, text='SCORES:'+str(scores),
+        s1 = canvas.create_text(400, 60, text='SCORES:'+str(scores),
                            fill='white', font=('Courier', 32))
 
         win.update()
@@ -418,6 +420,10 @@ def main():
         # 判断游戏是否结束
         if check_lost(locked_positions):
             run = False
+    # 游戏结束
+    canvas.delete(s1)
+    canvas.create_text(400, 60, text='YOU ARE LOST!',
+                       fill='white', font=('Courier', 32))
 
 
 # ===========================================================================
