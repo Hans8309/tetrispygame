@@ -3,7 +3,7 @@
 # Full Code: https://pastebin.com/embed_js/yaWTeF6y
 # 在原作者基础上增加分数显示，音效
 
-from ast import While
+
 import pygame
 import random
 
