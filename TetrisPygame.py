@@ -145,7 +145,7 @@ T = [['.....',
 
 shapes = [S, Z, I, O, J, L, T]
 shape_colors = [(0, 255, 0), (255, 0, 0), (0, 255, 255),
-                (255, 255, 0), (255, 165, 0), (0, 0, 255), (128, 0, 128)]
+                (255, 255, 0), (0, 0, 255), (255, 165, 0), (128, 0, 128)]
 # index 0 - 6 represent shape
 
 
@@ -395,7 +395,7 @@ def main():
                     current_piece.y -= 1
                     sound_settle.play()
                     # print(convert_shape_format(current_piece))  # todo fix
-
+ 
         # 返回当前方块的各个小块的坐标值，如：[(5, -4), (5, -3), (5, -2), (5, -1)]
         # 初始值：各个小块的y坐标的最小值为-1
         shape_pos = convert_shape_format(current_piece)
