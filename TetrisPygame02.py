@@ -13,7 +13,7 @@ shapes: S, Z, I, O, J, L, T
 represented in order by 0 - 6
 """
 
-# pygame.font.init()
+# pygame.font.init() 
 pygame.init()
 # 添加游戏背景音乐
 pygame.mixer.music.load('music.ogg')
